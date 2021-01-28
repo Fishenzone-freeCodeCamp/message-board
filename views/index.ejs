@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <a href="/new">New message</a>
+    <h1><%= title %></h1>
+    <div>
+      <% messages.forEach((value, index) => { %>
+      <ul>
+        <li>Name: <%= value.user %></li>
+        <li>Text: <%= value.text %></li>
+        <li>Added: <%= value.added %></li>
+      </ul>
+      <% }) %>
+    </div>
+  </body>
+</html>
