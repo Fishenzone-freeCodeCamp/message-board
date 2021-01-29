@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 router.get('/new', (req, res) => {
   res.render('form');
 });
-router.post('/new', function (req, res) {
+router.post('/new', (req, res) => {
   messages.push({
     text: req.body.message,
     user: req.body.author,
